@@ -10,7 +10,9 @@ SET(CMAKE_LIBRARY_PATH ${CMAKE_LIBRARY_PATH}
 FIND_PACKAGE(Threads)
 
 SET(AppLib_SRCS
-	app.cpp
+	app.c
+	prog_args.c
+	prog_config.c
 	utils/llist.c
 	utils/queue.c
 	utils/base64.c
@@ -31,6 +33,7 @@ TARGET_LINK_LIBRARIES(splinter_lib
 	crypto
         nghttp2
 	libconfig.a
+	libconfig++.a
 	libjansson.a
 	event_extra
 	event_openssl
