@@ -11,6 +11,7 @@ FIND_PACKAGE(Threads)
 
 SET(AppLib_SRCS
 	app.c
+	conn.c
 	prog_args.c
 	prog_config.c
 	utils/llist.c
